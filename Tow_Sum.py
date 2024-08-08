@@ -2,22 +2,25 @@ import Get_Nums_Target
 
 
 
-#result=Get_Nums_Target.getNumsAndTarget()
+def twoSum(self, nums, target):
+        result=[]
+        loop_continue=0
+
+        for index1,n in enumerate(nums):
+            
+            for index2,y in enumerate(nums) :
+                print(f"the  is in index1 is {index1} index2 {index2}")
+                           
+                if index1 != index2 and n+y==target :
+                   print(f"le somme de {n} et {y} = {target}")
+                   print(f"l index est {index2}")
+                   loop_continue=1
+                   result=[index1,index2]
+                   break
+            if loop_continue==1 :
+                 break
 
 
+        print(result)
 
-nums = [-3,2,5,7,14,11,15,7,4]
-target=8
-result=[]
-for index1,n in enumerate(nums):
-    loop_continue=0
-    for index2,y in enumerate(nums) :
-        if n+y==target :
-            print(f"{n}+{y} = {target}")
-            loop_continue=1
-            result=[index1,index2]
-    if loop_continue==1 :
-        break
-
-
-print(result)
+twoSum("x",[3,2,4],6)
